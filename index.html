@@ -4,29 +4,94 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HarisWorld</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+ margin:0;
+ font-family:Arial;
+ scroll-behavior:smooth;
+ color:white;
+}
+
+header{
+ text-align:center;
+ padding:40px;
+ background:linear-gradient(45deg,#ffcc00,#ff5733);
+}
+
+nav{
+ text-align:center;
+ background:black;
+ padding:15px;
+ position:sticky;
+ top:0;
+}
+
+nav a{
+ color:white;
+ text-decoration:none;
+ margin:0 15px;
+ font-size:18px;
+ font-weight:bold;
+}
+
+section{
+ padding:80px 20px;
+ text-align:center;
+ min-height:100vh;
+}
+
+#home{
+ background:linear-gradient(45deg,#ffcc00,#ff5733);
+}
+
+#projects{
+ background:linear-gradient(45deg,#ff9800,#ff5722);
+}
+
+#contact{
+ background:linear-gradient(45deg,#ff7043,#ff1744);
+}
+
+.card{
+ background:white;
+ color:black;
+ padding:20px;
+ border-radius:10px;
+ max-width:300px;
+ margin:20px auto;
+}
+</style>
+
 </head>
 <body>
 
 <header>
-  <h1>Welcome to HarisWorld!</h1>
-  <p>Ye meri personal student website hai 😎🔥</p>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<h1>Welcome to HarisWorld 😎🔥</h1>
+<p>Ye meri personal student website hai</p>
 </header>
 
+<nav>
+<a href="#home">Home</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+<h2>Home</h2>
+<p>Welcome 😄 meri website pe!</p>
+</section>
+
 <section id="projects">
-  <h2>Projects</h2>
-  <p>Yahan mere projects dekh sakte ho.</p>
+<h2>Projects</h2>
+<div class="card">Project 1 - My First Website</div>
+<div class="card">Project 2 - School Work</div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Mujhse contact karne ke liye yahan aao.</p>
+<h2>Contact</h2>
+<p>Email: haris@email.com</p>
 </section>
 
 </body>
-</html>
+  </html>
