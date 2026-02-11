@@ -3,16 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Haris Student Portfolio</title>
+<title>Haris Super Portfolio</title>
 
 <style>
 
 body{
 margin:0;
 font-family:Arial;
-background:linear-gradient(135deg,#ffcc00,#ff5e00);
+background:linear-gradient(-45deg,#ffcc00,#ff6600,#ff3300,#ffaa00);
+background-size:400% 400%;
+animation:bg 10s infinite alternate;
 color:white;
 text-align:center;
+}
+
+@keyframes bg{
+0%{background-position:left;}
+100%{background-position:right;}
 }
 
 nav{
@@ -24,36 +31,51 @@ top:0;
 
 nav a{
 color:white;
-margin:15px;
+margin:12px;
 font-size:18px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
 color:#ffcc00;
+text-shadow:0 0 10px yellow;
 }
 
 section{
-padding:60px 20px;
-min-height:100vh;
+padding:70px 20px;
+animation:fade 1.5s;
 }
 
-.card{
+@keyframes fade{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;}
+}
+
+.box{
 background:white;
 color:black;
 margin:20px auto;
-padding:20px;
+padding:25px;
 width:85%;
 max-width:400px;
 border-radius:20px;
-font-size:18px;
-font-weight:bold;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.box:hover{
+transform:scale(1.05);
+}
+
+h1{
+text-shadow:0 0 15px rgba(255,255,255,0.8);
 }
 
 footer{
 background:black;
-padding:20px;
+padding:25px;
 }
 
 </style>
@@ -65,42 +87,65 @@ padding:20px;
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
-<a href="#work">My Work</a>
+<a href="#work">Work</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <section id="home">
-<h1>Welcome to Haris World 😎🔥</h1>
-<p>I am a student learning Web Development.</p>
+<h1 id="typing"></h1>
+<p>I am Haris 😎 — Student & Future Web Developer 🔥</p>
 </section>
 
 <section id="about">
 <h1>About Me 👦</h1>
-<p>Name: Haris</p>
-<p>I am a student and learning coding and website making.</p>
+<div class="box">
+<p>👋 Hello! I'm Haris from Pakistan.</p>
+<p>💻 Learning Web Development.</p>
+<p>🚀 Dream = Become Pro Developer.</p>
+</div>
 </section>
 
 <section id="skills">
-<h1>My Skills 💻</h1>
-<div class="card">HTML ✅</div>
-<div class="card">CSS ✅</div>
-<div class="card">Website Design ✅</div>
+<h1>Skills 💻</h1>
+<div class="box">HTML Master 😎</div>
+<div class="box">CSS Styling 🔥</div>
+<div class="box">Learning JavaScript ⚡</div>
 </section>
 
 <section id="work">
 <h1>My Work 🚀</h1>
-<div class="card">My First Website</div>
-<div class="card">Practice Projects</div>
+<div class="box">Student Portfolio Website</div>
+<div class="box">School Coding Practice</div>
+<div class="box">Future Big Projects Coming 🔥</div>
 </section>
 
 <section id="contact">
 <h1>Contact 📧</h1>
+<div class="box">
 <p>Email: yourgmail@gmail.com</p>
+<p>GitHub: rubinarehan51-commits</p>
+</div>
 </section>
 
 <footer>
-<p>© Haris Student Portfolio</p>
+<p>© Haris Super Portfolio 🔥</p>
 </footer>
+
+<script>
+
+let text="🔥 Welcome to Haris Super World 😎";
+let i=0;
+
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,60);
+}
+}
+type();
+
+</script>
 
 </body>
 </html>
