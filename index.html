@@ -1,75 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HarisWorld</title>
+<title>Haris World</title>
 
 <style>
-body{
- margin:0;
- font-family:Arial;
- scroll-behavior:smooth;
- color:white;
-}
 
-header{
- text-align:center;
- padding:40px;
- background:linear-gradient(45deg,#ffcc00,#ff5733);
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ffcc00,#ff5e00);
+color:white;
+text-align:center;
 }
 
 nav{
- text-align:center;
- background:black;
- padding:15px;
- position:sticky;
- top:0;
+background:black;
+padding:15px;
+position:sticky;
+top:0;
 }
 
 nav a{
- color:white;
- text-decoration:none;
- margin:0 15px;
- font-size:18px;
- font-weight:bold;
+color:white;
+margin:15px;
+font-size:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ffcc00;
 }
 
 section{
- padding:80px 20px;
- text-align:center;
- min-height:100vh;
+padding:60px 20px;
 }
 
-#home{
- background:linear-gradient(45deg,#ffcc00,#ff5733);
-}
-
-#projects{
- background:linear-gradient(45deg,#ff9800,#ff5722);
-}
-
-#contact{
- background:linear-gradient(45deg,#ff7043,#ff1744);
+h1{
+font-size:40px;
 }
 
 .card{
- background:white;
- color:black;
- padding:20px;
- border-radius:10px;
- max-width:300px;
- margin:20px auto;
+background:white;
+color:black;
+margin:20px auto;
+padding:20px;
+width:85%;
+max-width:400px;
+border-radius:20px;
+font-size:20px;
+font-weight:bold;
 }
+
+.card a{
+text-decoration:none;
+color:black;
+display:block;
+}
+
+.card:hover{
+transform:scale(1.05);
+transition:0.3s;
+}
+
+footer{
+background:black;
+padding:20px;
+}
+
 </style>
-
 </head>
-<body>
 
-<header>
-<h1>Welcome to HarisWorld 😎🔥</h1>
-<p>Ye meri personal student website hai</p>
-</header>
+<body>
 
 <nav>
 <a href="#home">Home</a>
@@ -78,20 +82,36 @@ section{
 </nav>
 
 <section id="home">
-<h2>Home</h2>
-<p>Welcome 😄 meri website pe!</p>
+<h1>Welcome to Haris World 😎🔥</h1>
+<p>Ye meri personal student website hai.</p>
 </section>
 
 <section id="projects">
-<h2>Projects</h2>
-<div class="card">Project 1 - My First Website</div>
-<div class="card">Project 2 - School Work</div>
+<h1>Projects</h1>
+
+<div class="card">
+<a href="https://google.com" target="_blank">
+Project 1 - My First Website
+</a>
+</div>
+
+<div class="card">
+<a href="https://youtube.com" target="_blank">
+Project 2 - School Work
+</a>
+</div>
+
 </section>
 
 <section id="contact">
-<h2>Contact</h2>
+<h1>Contact</h1>
+<p>Mujhse contact karne ke liye:</p>
 <p>Email: haris@email.com</p>
 </section>
 
+<footer>
+<p>© Haris World</p>
+</footer>
+
 </body>
-  </html>
+</html>
