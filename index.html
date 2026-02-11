@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Haris Super Portfolio</title>
-
+<title>Haris ULTRA Portfolio</title>
 <style>
-
+/* ===== Body & Background ===== */
 body{
 margin:0;
 font-family:Arial;
 background:linear-gradient(-45deg,#ffcc00,#ff6600,#ff3300,#ffaa00);
 background-size:400% 400%;
-animation:bg 10s infinite alternate;
+animation:bg 12s infinite alternate;
 color:white;
 text-align:center;
+transition:0.5s;
+}
+
+body.dark{
+background: #111;
+color:white;
 }
 
 @keyframes bg{
@@ -22,11 +27,16 @@ text-align:center;
 100%{background-position:right;}
 }
 
+/* ===== Navbar ===== */
 nav{
 background:black;
 padding:15px;
 position:sticky;
 top:0;
+z-index:10;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
 }
 
 nav a{
@@ -43,6 +53,24 @@ color:#ffcc00;
 text-shadow:0 0 10px yellow;
 }
 
+/* ===== Dark Mode Button ===== */
+#darkToggle{
+margin-left:20px;
+padding:5px 10px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+background:#ffcc00;
+font-weight:bold;
+color:black;
+transition:0.3s;
+}
+
+#darkToggle:hover{
+background:#ffaa00;
+}
+
+/* ===== Sections ===== */
 section{
 padding:70px 20px;
 animation:fade 1.5s;
@@ -53,6 +81,7 @@ from{opacity:0;transform:translateY(40px);}
 to{opacity:1;}
 }
 
+/* ===== Cards / Boxes ===== */
 .box{
 background:white;
 color:black;
@@ -69,56 +98,117 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-h1{
-text-shadow:0 0 15px rgba(255,255,255,0.8);
+.box a{
+text-decoration:none;
+color:black;
+display:block;
 }
 
+/* ===== Profile Image ===== */
+#profile{
+border-radius:50%;
+width:150px;
+height:150px;
+border:5px solid white;
+margin:20px auto;
+display:block;
+}
+
+/* ===== Skills Bars ===== */
+.skill{
+background:#222;
+border-radius:20px;
+margin:15px auto;
+width:85%;
+max-width:400px;
+height:25px;
+overflow:hidden;
+}
+
+.skill-bar{
+height:100%;
+background:#ffcc00;
+width:0%;
+text-align:right;
+padding-right:10px;
+line-height:25px;
+color:black;
+font-weight:bold;
+border-radius:20px;
+transition:1s;
+}
+
+/* ===== Footer ===== */
 footer{
 background:black;
 padding:25px;
+margin-top:40px;
 }
-
 </style>
 </head>
-
 <body>
 
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
-<a href="#work">Work</a>
+<a href="#work">My Work</a>
 <a href="#contact">Contact</a>
+<button id="darkToggle">🌙 Dark Mode</button>
 </nav>
 
+<!-- ===== Home ===== -->
 <section id="home">
 <h1 id="typing"></h1>
 <p>I am Haris 😎 — Student & Future Web Developer 🔥</p>
 </section>
 
+<!-- ===== About Me ===== -->
 <section id="about">
 <h1>About Me 👦</h1>
+<img src="https://via.placeholder.com/150" id="profile" alt="Profile Photo">
 <div class="box">
 <p>👋 Hello! I'm Haris from Pakistan.</p>
-<p>💻 Learning Web Development.</p>
-<p>🚀 Dream = Become Pro Developer.</p>
+<p>💻 Learning Web Development & coding</p>
+<p>🚀 Goal: Become Pro Developer</p>
 </div>
 </section>
 
+<!-- ===== Skills ===== -->
 <section id="skills">
 <h1>Skills 💻</h1>
-<div class="box">HTML Master 😎</div>
-<div class="box">CSS Styling 🔥</div>
-<div class="box">Learning JavaScript ⚡</div>
+<div class="skill"><div class="skill-bar" style="width:80%">HTML</div></div>
+<div class="skill"><div class="skill-bar" style="width:70%">CSS</div></div>
+<div class="skill"><div class="skill-bar" style="width:50%">JavaScript</div></div>
 </section>
 
+<!-- ===== My Work ===== -->
 <section id="work">
 <h1>My Work 🚀</h1>
-<div class="box">Student Portfolio Website</div>
-<div class="box">School Coding Practice</div>
-<div class="box">Future Big Projects Coming 🔥</div>
+<div class="box">
+<a href="https://rubinarehan51-commits.github.io/haris-world/" target="_blank">
+✅ Student Portfolio Website (Current)
+</a>
+</div>
+
+<div class="box">
+📝 School Practice Pages - Coming Soon
+</div>
+
+<div class="box">
+🔥 Future Web Apps - Coming Soon
+</div>
+
+<div class="box">
+🎮 Mini Games / Fun Projects - Coming Soon
+</div>
+
+<div class="box">
+📚 Study Notes Website - Coming Soon
+</div>
 </section>
 
+<!-- ===== Contact ===== -->
 <section id="contact">
 <h1>Contact 📧</h1>
 <div class="box">
@@ -128,14 +218,13 @@ padding:25px;
 </section>
 
 <footer>
-<p>© Haris Super Portfolio 🔥</p>
+<p>© Haris ULTRA Portfolio 🔥</p>
 </footer>
 
 <script>
-
-let text="🔥 Welcome to Haris Super World 😎";
+/* ===== Typing Effect ===== */
+let text="🔥 Welcome to Haris ULTRA World 😎";
 let i=0;
-
 function type(){
 if(i<text.length){
 document.getElementById("typing").innerHTML+=text.charAt(i);
@@ -145,7 +234,12 @@ setTimeout(type,60);
 }
 type();
 
+/* ===== Dark Mode Toggle ===== */
+const toggle = document.getElementById("darkToggle");
+toggle.addEventListener("click",()=>{
+document.body.classList.toggle("dark");
+});
 </script>
 
 </body>
-</html>
+  </html>
